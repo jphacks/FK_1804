@@ -72,20 +72,30 @@
             </objects>
             <point key="canvasLocation" x="165" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Story View Controller-->
         <scene sceneID="2dU-YE-tqW">
             <objects>
-                <viewController id="J5n-WB-0BA" sceneMemberID="viewController">
+                <viewController id="J5n-WB-0BA" customClass="StoryViewController" customModule="Interactibook" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xJ0-x0-6o1">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXl-7v-9zS" customClass="SKView">
+                                <rect key="frame" x="0.0" y="70" width="1024" height="698"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="JEg-QU-MNX"/>
                     </view>
+                    <connections>
+                        <outlet property="storySceneView" destination="QXl-7v-9zS" id="RHb-H0-F18"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6k-Da-XPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1563" y="133"/>
+            <point key="canvasLocation" x="1562.6953125" y="132.8125"/>
         </scene>
     </scenes>
 </document>

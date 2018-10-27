@@ -112,8 +112,6 @@ class TitleScene:SKScene{
             //タッチしたのがラベルノードの場合、スタートボタンなのかを確認する。
             let startButton = self.childNode(withName: "nextNode") as? SKSpriteNode
             if(node == startButton) {
-                let skView = self.view as! SKView
-                print("ok")
                 //スタートボタンを押した場合はプレイ画面に切り替える。
                 //let result = WindSunScene(fileNamed: "WindSunScene")
                 nextScene()
@@ -123,6 +121,7 @@ class TitleScene:SKScene{
     }
     
     func nextScene(){
+        let skView = self.view as! SKView
         let transition = SKTransition.flipVertical(withDuration: 1)
         let result = WindSunScene(size: self.frame.size)
         self.view!.presentScene(result, transition: transition)

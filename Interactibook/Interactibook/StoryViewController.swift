@@ -8,15 +8,27 @@
 
 import UIKit
 import SpriteKit
+import Firebase
+import FirebaseCore
+import FirebaseDatabase
 
 class StoryViewController: UIViewController {
 
     @IBOutlet weak var storySceneView: SKView!
     
+    var databaseRef:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        databaseRef = Database.database().reference()
+        
+        databaseRef.observe(DataEventType.childAdded, with: { snapshot in //セッティングしている。新しいデータが入ってくるのを見張ってる。もしも、新しいデータが入ってきた場合{}内の処理を実行する。
+            if let name = (snapshot.value! as AnyObject).object(forKey: "name") as? String,
+                let message = (snapshot.value! as AnyObject).object(forKey: "message") as? String {
+                
+            }
+        })
         
         //SKViewを取得する。
         //let skView = self.storySceneView as! SKView

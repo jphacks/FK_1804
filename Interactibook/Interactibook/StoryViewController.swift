@@ -15,18 +15,20 @@ import FirebaseDatabase
 class StoryViewController: UIViewController {
 
     @IBOutlet weak var storySceneView: SKView!
+
+    var nextIdx:Int = 0
     
-    var databaseRef:DatabaseReference!
+    var ref:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        databaseRef = Database.database().reference()
-        
-        databaseRef.observe(DataEventType.childAdded, with: { snapshot in //セッティングしている。新しいデータが入ってくるのを見張ってる。もしも、新しいデータが入ってきた場合{}内の処理を実行する。
-            if let name = (snapshot.value! as AnyObject).object(forKey: "name") as? String,
-                let message = (snapshot.value! as AnyObject).object(forKey: "message") as? String {
-                
+        ref = Database.database().reference().child("command")
+        ref.observe(DataEventType.childChanged, with: { snapshot in
+            if let keyword = snapshot.value! as? String{
+                Singleton.sharedInstance.setKeyWord = keyword
+                print(keyword)
+                self.selectActions(key: Singleton.sharedInstance.setKeyWord)
             }
         })
         
@@ -37,18 +39,51 @@ class StoryViewController: UIViewController {
         //let scene = MainScene(size:skView.frame.size)
         let scene = TitleScene(size:storySceneView.frame.size)
         
+        
+        
         //現在シーンを設定する。
         storySceneView.presentScene(scene)
         // Do any additional setup after loading the view.
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+extension StoryViewController{
+    
+    func selectActions(key:String) {
+        switch key {
+        case "next_story":
+            if nextIdx == 0 {
+                let sc =  self.storySceneView.scene as! TitleScene
+                sc.nextScene()
+            }else if nextIdx == 1{
+                let sc =  self.storySceneView.scene as! WindSunScene
+                sc.nextScene()
+            }else if nextIdx == 2{
+                let sc =  self.storySceneView.scene as! WindScene
+                sc.nextScene()
+            }else {
+                return
+            }
+            self.nextIdx += 1
+        case "wind":
+//            let sc =  self.storySceneView.scene as! WindSunScene
+//            sc.nextScene()
+            return
+        case "sun":
+//            let sc =  self.storySceneView.scene as! WindScene
+//            sc.nextScene()
+            return
+//        case "win_sun":
+//            let sc =  self.storySceneView.scene as! SunScene
+//            sc.nextScene()
+//        case "end":
+//            let sc =  self.storySceneView.scene as! 
+//            sc.nextScene()
+        default:
+            return
+        }
+    
     }
-    */
-
+    
 }

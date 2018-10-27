@@ -45,6 +45,8 @@
 		5E09223D218444130080C924 /* flowerparticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5E09223B218444130080C924 /* flowerparticle.sks */; };
 		5E09223E218444130080C924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E09223C218444130080C924 /* Assets.xcassets */; };
 		5E09224021844A5B0080C924 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E09223F21844A5B0080C924 /* GoogleService-Info.plist */; };
+		5E0922462184CAC70080C924 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0922452184CAC70080C924 /* apple.png */; };
+		5E0922482184CAD00080C924 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0922472184CAD00080C924 /* tree.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		5E09223B218444130080C924 /* flowerparticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = flowerparticle.sks; sourceTree = "<group>"; };
 		5E09223C218444130080C924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E09223F21844A5B0080C924 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E0922452184CAC70080C924 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		5E0922472184CAD00080C924 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		63D60AA82F0507A10D4BC775 /* Pods-InteractibookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractibookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InteractibookUITests/Pods-InteractibookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		81A464118BF429BAACF8A45B /* Pods-Interactibook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interactibook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Interactibook/Pods-Interactibook.debug.xcconfig"; sourceTree = "<group>"; };
 		952B3FA115346BD1AA0BB6A6 /* Pods-InteractibookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractibookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InteractibookUITests/Pods-InteractibookUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -246,7 +250,9 @@
 				5E09220E21843B800080C924 /* cloud.png */,
 				5E09220B21843B800080C924 /* haikei1.png */,
 				5E09220721843B800080C924 /* haikei2.jpg */,
+				5E0922452184CAC70080C924 /* apple.png */,
 				5E09220621843B800080C924 /* kusa1.png */,
+				5E0922472184CAD00080C924 /* tree.png */,
 				5E092238218442EA0080C924 /* flower.png */,
 				5E092237218442EA0080C924 /* shine1.mp3 */,
 				5E09221D21843C050080C924 /* next.png */,
@@ -375,6 +381,7 @@
 			files = (
 				5E09221521843B800080C924 /* taiyou.png in Resources */,
 				5E092236218442A70080C924 /* cold.png in Resources */,
+				5E0922482184CAD00080C924 /* tree.png in Resources */,
 				5E09224021844A5B0080C924 /* GoogleService-Info.plist in Resources */,
 				5E0921DC218433B30080C924 /* LaunchScreen.storyboard in Resources */,
 				5E092233218442A70080C924 /* man_coat.png in Resources */,
@@ -397,6 +404,7 @@
 				5E09221321843B800080C924 /* haikei2.jpg in Resources */,
 				5E09221821843B800080C924 /* cloud.mp3 in Resources */,
 				5E09223E218444130080C924 /* Assets.xcassets in Resources */,
+				5E0922462184CAC70080C924 /* apple.png in Resources */,
 				5E092239218442EA0080C924 /* shine1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

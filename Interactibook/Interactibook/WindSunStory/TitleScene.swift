@@ -114,6 +114,7 @@ class TitleScene:SKScene {
                 //スタートボタンを押した場合はプレイ画面に切り替える。
                 //let result = WindSunScene(fileNamed: "WindSunScene")
                 let result = WindSunScene(size: skView.frame.size)
+                print(result)
                 self.view!.presentScene(result, transition: transition)
             }
             

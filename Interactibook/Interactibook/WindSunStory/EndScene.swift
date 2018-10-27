@@ -1,5 +1,5 @@
 //
-//  WindSun.swift
+//  EndScene.swift
 //  Interactibook
 //
 //  Created by 仲地早司 on 2018/10/27.

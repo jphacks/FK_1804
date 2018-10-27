@@ -16,17 +16,22 @@ class StoryViewController: UIViewController {
 
     @IBOutlet weak var storySceneView: SKView!
     
-    var databaseRef:DatabaseReference!
+    var ref:DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        databaseRef = Database.database().reference()
-        
-        databaseRef.observe(DataEventType.childAdded, with: { snapshot in //セッティングしている。新しいデータが入ってくるのを見張ってる。もしも、新しいデータが入ってきた場合{}内の処理を実行する。
-            if let name = (snapshot.value! as AnyObject).object(forKey: "name") as? String,
-                let message = (snapshot.value! as AnyObject).object(forKey: "message") as? String {
-                
+        ref = Database.database().reference().child("command")
+        ref.observe(DataEventType.childChanged, with: { snapshot in
+            if let keyword = snapshot.value! as? String{
+                Singleton.sharedInstance.setKeyWord = keyword
+                if Singleton.sharedInstance.setKeyWord == "next_story" {
+                    print("渡された値を受け取れたよ")
+                    print(Singleton.sharedInstance.setKeyWord)
+                    let sc =  self.storySceneView.scene as! TitleScene
+                    sc.nextScene()
+
+                }
             }
         })
         
@@ -36,6 +41,8 @@ class StoryViewController: UIViewController {
         //SKViewと同じサイズのSKSceneインスタンスを生成する。
         //let scene = MainScene(size:skView.frame.size)
         let scene = TitleScene(size:storySceneView.frame.size)
+        
+        
         
         //現在シーンを設定する。
         storySceneView.presentScene(scene)

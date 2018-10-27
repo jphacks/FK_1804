@@ -45,6 +45,7 @@
 		5E09223D218444130080C924 /* flowerparticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5E09223B218444130080C924 /* flowerparticle.sks */; };
 		5E09223E218444130080C924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E09223C218444130080C924 /* Assets.xcassets */; };
 		5E09224021844A5B0080C924 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E09223F21844A5B0080C924 /* GoogleService-Info.plist */; };
+		875C2AC221847A6F008EDC67 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C2AC121847A6F008EDC67 /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		5E09223F21844A5B0080C924 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		63D60AA82F0507A10D4BC775 /* Pods-InteractibookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractibookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InteractibookUITests/Pods-InteractibookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		81A464118BF429BAACF8A45B /* Pods-Interactibook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interactibook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Interactibook/Pods-Interactibook.debug.xcconfig"; sourceTree = "<group>"; };
+		875C2AC121847A6F008EDC67 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		952B3FA115346BD1AA0BB6A6 /* Pods-InteractibookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractibookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InteractibookUITests/Pods-InteractibookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A82640FDB80D1A3A5A8E6860 /* Pods-Interactibook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interactibook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Interactibook/Pods-Interactibook.release.xcconfig"; sourceTree = "<group>"; };
 		B01A71CFE19C9BC0317C29C9 /* Pods-InteractibookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractibookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InteractibookTests/Pods-InteractibookTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		5E0921D0218433B20080C924 /* Interactibook */ = {
 			isa = PBXGroup;
 			children = (
+				875C2AC121847A6F008EDC67 /* Singleton.swift */,
 				5E0922022184387F0080C924 /* images */,
 				5E092201218437BC0080C924 /* WindSunStory */,
 				5E0921D1218433B20080C924 /* AppDelegate.swift */,
@@ -518,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E092200218437AA0080C924 /* StoryViewController.swift in Sources */,
+				875C2AC221847A6F008EDC67 /* Singleton.swift in Sources */,
 				5E0921D4218433B20080C924 /* ViewController.swift in Sources */,
 				5E092228218441AC0080C924 /* WindSunScene.swift in Sources */,
 				5E09222A218441B90080C924 /* WindScene.swift in Sources */,
@@ -707,7 +711,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tokulab.Interactibook;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tokulab.Interactibook-1028";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -726,7 +730,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.tokulab.Interactibook;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tokulab.Interactibook-1028";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 2;

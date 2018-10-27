@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 import AVFoundation
 
-class TitleScene:SKScene {
+class TitleScene:SKScene{
     
     var manNode:SKSpriteNode!
     var sunNode:SKSpriteNode!
@@ -20,6 +20,10 @@ class TitleScene:SKScene {
     var player:AVAudioPlayer!  //for music
     //現在シーン設定時の呼び出しメソッド
     override func didMove(to view: SKView) {
+        
+        // 自身の変数 test を監視対象として登録
+        self.addObserver(self, forKeyPath: "key", options: [.old, .new], context: nil)
+        
         //背景画像のノードを作成する。
         let backNode = SKSpriteNode(imageNamed: "haikei1")
         //背景画像のサイズをシーンのサイズと同じにする。
@@ -109,15 +113,19 @@ class TitleScene:SKScene {
             let startButton = self.childNode(withName: "nextNode") as? SKSpriteNode
             if(node == startButton) {
                 let skView = self.view as! SKView
-                let transition = SKTransition.flipVertical(withDuration: 1)
                 print("ok")
                 //スタートボタンを押した場合はプレイ画面に切り替える。
                 //let result = WindSunScene(fileNamed: "WindSunScene")
-                let result = WindSunScene(size: skView.frame.size)
-                self.view!.presentScene(result, transition: transition)
+                nextScene()
             }
             
         }
     }
+    
+    func nextScene(){
+        let transition = SKTransition.flipVertical(withDuration: 1)
+        let result = WindSunScene(size: self.frame.size)
+        self.view!.presentScene(result, transition: transition)
+    }
+    
 }
-

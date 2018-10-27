@@ -16,6 +16,10 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
     var nextNode:SKSpriteNode!
     var grass1Node:SKSpriteNode!
     var grass2Node:SKSpriteNode!
+    var treeNode:SKSpriteNode!
+    var apple1Node:SKSpriteNode!
+    var apple2Node:SKSpriteNode!
+    var apple3Node:SKSpriteNode!
     var vortexNode:SKFieldNode!
     var player:AVAudioPlayer!  //for music
     
@@ -54,6 +58,22 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         grass2Node.position = CGPoint(x: self.frame.midX, y: 50)
         grass2Node.physicsBody = SKPhysicsBody(texture: grass2Node.texture!, size: grass2Node.size)
         
+        //木のノードを作成
+        treeNode = SKSpriteNode(imageNamed: "tree")
+        treeNode.setScale(0.4)
+        treeNode.position = CGPoint(x: self.frame.midX/2 - 50, y: self.frame.midY/2 + 60)
+        
+        //りんごのノードを作成
+        apple1Node = SKSpriteNode(imageNamed: "apple")
+        apple1Node.setScale(0.08)
+        apple1Node.position = CGPoint(x: self.frame.midX/2 - 70, y: self.frame.midY/2 + 90)
+        apple2Node = SKSpriteNode(imageNamed: "apple")
+        apple2Node.setScale(0.08)
+        apple2Node.position = CGPoint(x: self.frame.midX/2 - 20, y: self.frame.midY/2 + 90)
+        apple3Node = SKSpriteNode(imageNamed: "apple")
+        apple3Node.setScale(0.08)
+        apple3Node.position = CGPoint(x: self.frame.midX/2 - 45, y: self.frame.midY/2 + 150)
+        
         //カテゴリマスクを設定する
         self.physicsBody?.categoryBitMask = 0b0001
         //デリゲート先を自分に設定する。
@@ -68,6 +88,10 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         self.addChild(nextNode)
         self.addChild(grass1Node)
         self.addChild(grass2Node)
+        self.addChild(treeNode)
+        self.addChild(apple1Node)
+        self.addChild(apple2Node)
+        self.addChild(apple3Node)
         
         //以下アクション
         let cloudActionBig = SKAction.scale(to: 1.6, duration: 1)
@@ -91,10 +115,10 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         vortexNode.isEnabled = false
         
         //中心ノードを取得する。
-        let centerNode = self.childNode(withName: "center_point") as? SKSpriteNode
+        //let centerNode = self.childNode(withName: "center_point") as? SKSpriteNode
         
         //中心ノードの子に旋風ノードを追加する。
-        centerNode?.addChild(vortexNode)
+        //centerNode?.addChild(vortexNode)
         self.addChild(vortexNode)
         
         //音楽
@@ -114,6 +138,10 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
     //画面タッチ時の呼び出しメソッド
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in:self)
+        
+        apple1Node.physicsBody = SKPhysicsBody(texture: apple1Node.texture!, size:apple1Node.size)
+        apple2Node.physicsBody = SKPhysicsBody(texture: apple2Node.texture!, size:apple2Node.size)
+        apple3Node.physicsBody = SKPhysicsBody(texture: apple3Node.texture!, size:apple3Node.size)
         
         //旋風ノードを取得する。
         let vortexNode = self.childNode(withName: "vortex") as? SKFieldNode

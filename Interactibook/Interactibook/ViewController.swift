@@ -9,22 +9,48 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var recommendCollectionView: UICollectionView!
+    @IBOutlet weak var listCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        collectionView.dataSource = self
+        recommendCollectionView.dataSource = self
+        listCollectionView.dataSource = self
     }
 }
 
 extension ViewController: UICollectionViewDataSource {
+    /*
+    func recommendCollectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func listCollectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 15
+    }
+    
+    func recommendCollectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let recommendcell = recommendCollectionView.dequeueReusableCell(withReuseIdentifier: "RecommendCell", for: indexPath)
+        recommendcell.backgroundColor = .green
+        
+        return recommendcell
+    }
+    
+    func listCollectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let listcell = recommendCollectionView.dequeueReusableCell(withReuseIdentifier: "ListCell", for: indexPath)
+        listcell.backgroundColor = .red
+        
+        return listcell
+    }
+    */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return 15
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        cell.backgroundColor = .red
+        cell.backgroundColor = .green
         
         return cell
     }

@@ -65,6 +65,6 @@ class EndScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(shiNode)
         self.addChild(maNode)
         self.addChild(iNode)
-        
-}
+    
+    }
 }

@@ -50,7 +50,6 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
         nextNode.setScale(0.5)
         nextNode.position = CGPoint(x: self.frame.midX + self.frame.midX/2, y:nextNode.frame.height)
         
-        
         //カテゴリマスクを設定する
         self.physicsBody?.categoryBitMask = 0b0001
         //デリゲート先を自分に設定する。
@@ -65,7 +64,6 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
         self.addChild(flowerNode)
         self.addChild(nextNode)
         
-        
         //以下アクション
         let sunAction1 = SKAction.move(to: CGPoint(x: 0, y: self.frame.height*3/4), duration: 4)
         let sunAction2 = SKAction.move(to: CGPoint(x: self.frame.width, y: self.frame.height*3/4), duration: 4)
@@ -77,14 +75,12 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in:self)
         if let node = atPoint(location) as? SKSpriteNode {
-            
-            //タッチしたのがラベルノードの場合、スタートボタンなのかを確認する。
+
             let startButton = self.childNode(withName: "nextNode") as? SKSpriteNode
             if(node == startButton) {
                 nextScene()
             }
-            
-            
+
             let flowerButton = self.childNode(withName: "flowerNode") as? SKSpriteNode
             if(node == flowerButton) {
                 //let skView = self.view as! SKView
@@ -124,7 +120,6 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
         let skView = self.view as! SKView
         let transition = SKTransition.flipVertical(withDuration: 1)
         //スタートボタンを押した場合はプレイ画面に切り替える。
-        //let result = Scene(fileNamed: "WindSunScene")
         let result = EndScene(size: skView.frame.size)
         self.view!.presentScene(result, transition: transition)
     }

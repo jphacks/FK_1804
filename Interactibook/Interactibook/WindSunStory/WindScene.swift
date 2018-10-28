@@ -40,8 +40,8 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         
         //風のノードを作成
         konoha = SKSpriteNode(imageNamed: "konoha")
-        konoha.setScale(0.3)
-        konoha.position = CGPoint(x:self.frame.midX + 100, y: self.frame.midY/4 + 50)
+        konoha.setScale(0.09)
+        konoha.position = CGPoint(x: 30, y: self.frame.midY/4 + 50)
         
         //寒い人のノードを作成
         coldNode = SKSpriteNode(imageNamed: "cold")
@@ -146,10 +146,6 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in:self)
         
-        apple1Node.physicsBody = SKPhysicsBody(texture: apple1Node.texture!, size:apple1Node.size)
-        apple2Node.physicsBody = SKPhysicsBody(texture: apple2Node.texture!, size:apple2Node.size)
-        apple3Node.physicsBody = SKPhysicsBody(texture: apple3Node.texture!, size:apple3Node.size)
-        
         //旋風ノードを取得する。
         let vortexNode = self.childNode(withName: "vortex") as? SKFieldNode
         //旋風ノードの有効無効を切り替える。
@@ -175,5 +171,9 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
     
     func whirlwind(){
         vortexNode?.isEnabled = !vortexNode!.isEnabled
+        apple1Node.physicsBody = SKPhysicsBody(texture: apple1Node.texture!, size:apple1Node.size)
+        apple2Node.physicsBody = SKPhysicsBody(texture: apple2Node.texture!, size:apple2Node.size)
+        apple3Node.physicsBody = SKPhysicsBody(texture: apple3Node.texture!, size:apple3Node.size)
+        konoha.physicsBody = SKPhysicsBody(texture: konoha.texture!, size:konoha.size)
     }
 }

@@ -58,6 +58,7 @@
 		870D23F5218550D1004A9483 /* wind.png in Resources */ = {isa = PBXBuildFile; fileRef = 870D23F4218550D1004A9483 /* wind.png */; };
 		870D23F7218556D1004A9483 /* konoha.png in Resources */ = {isa = PBXBuildFile; fileRef = 870D23F6218556D1004A9483 /* konoha.png */; };
 		875C2AC221847A6F008EDC67 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C2AC121847A6F008EDC67 /* Singleton.swift */; };
+		87F95F6B218576D90057C57A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 87F95F6A218576D90057C57A /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		870D23F4218550D1004A9483 /* wind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wind.png; sourceTree = "<group>"; };
 		870D23F6218556D1004A9483 /* konoha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = konoha.png; sourceTree = "<group>"; };
 		875C2AC121847A6F008EDC67 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		87F95F6A218576D90057C57A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		952B3FA115346BD1AA0BB6A6 /* Pods-InteractibookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractibookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InteractibookUITests/Pods-InteractibookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A82640FDB80D1A3A5A8E6860 /* Pods-Interactibook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interactibook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Interactibook/Pods-Interactibook.release.xcconfig"; sourceTree = "<group>"; };
 		B01A71CFE19C9BC0317C29C9 /* Pods-InteractibookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractibookTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InteractibookTests/Pods-InteractibookTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		5E0921D0218433B20080C924 /* Interactibook */ = {
 			isa = PBXGroup;
 			children = (
+				87F95F6A218576D90057C57A /* icon.png */,
 				875C2AC121847A6F008EDC67 /* Singleton.swift */,
 				5E0922022184387F0080C924 /* images */,
 				5E092201218437BC0080C924 /* WindSunStory */,
@@ -432,6 +435,7 @@
 				870D23F021853D40004A9483 /* MatchCover.jpg in Resources */,
 				870D23F7218556D1004A9483 /* konoha.png in Resources */,
 				5E09221721843B800080C924 /* haikei1.png in Resources */,
+				87F95F6B218576D90057C57A /* icon.png in Resources */,
 				5E09221221843B800080C924 /* kusa1.png in Resources */,
 				5E09221621843B800080C924 /* man_title.png in Resources */,
 				5E09221921843B800080C924 /* title.mp3 in Resources */,

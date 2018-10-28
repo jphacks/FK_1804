@@ -70,8 +70,8 @@ extension StoryViewController{
             }
             self.nextIdx += 1
         case "wind":
-//            let sc =  self.storySceneView.scene as! WindSunScene
-//            sc.nextScene()
+            let sc =  self.storySceneView.scene as! WindScene
+            sc.whirlwind()
             return
         case "sun":
 //            let sc =  self.storySceneView.scene as! WindScene

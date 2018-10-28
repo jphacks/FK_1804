@@ -21,6 +21,7 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
     var apple2Node:SKSpriteNode!
     var apple3Node:SKSpriteNode!
     var vortexNode:SKFieldNode!
+    var konoha:SKSpriteNode!
     var player:AVAudioPlayer!  //for music
     
     override func didMove(to view: SKView){
@@ -36,6 +37,11 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         cloudNode.setScale(1.4)
         //雲の位置を調整
         cloudNode.position = CGPoint(x: cloudNode.frame.width/2, y: self.frame.height*3/4)
+        
+        //風のノードを作成
+        konoha = SKSpriteNode(imageNamed: "konoha")
+        konoha.setScale(0.3)
+        konoha.position = CGPoint(x:self.frame.midX + 100, y: self.frame.midY/4 + 50)
         
         //寒い人のノードを作成
         coldNode = SKSpriteNode(imageNamed: "cold")
@@ -92,6 +98,7 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         self.addChild(apple1Node)
         self.addChild(apple2Node)
         self.addChild(apple3Node)
+        self.addChild(konoha)
         
         //以下アクション
         let cloudActionBig = SKAction.scale(to: 1.6, duration: 1)
@@ -106,7 +113,7 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         vortexNode = SKFieldNode.vortexField()
         vortexNode.name = "vortex"
         vortexNode.position = CGPoint(x:self.frame.midX, y:self.frame.midY)
-        vortexNode.strength = 2
+        vortexNode.strength = 0.8
         
         //旋風ノードのカテゴリマスクを設定する。
         vortexNode.categoryBitMask = 0b0001
@@ -146,7 +153,7 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         //旋風ノードを取得する。
         let vortexNode = self.childNode(withName: "vortex") as? SKFieldNode
         //旋風ノードの有効無効を切り替える。
-        vortexNode?.isEnabled = !vortexNode!.isEnabled
+        whirlwind()
         if let node = atPoint(location) as? SKSpriteNode {
             //タッチしたのがラベルノードの場合、スタートボタンなのかを確認する。
             let startButton = self.childNode(withName: "nextNode") as? SKSpriteNode
@@ -164,5 +171,9 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         //let result = WindSunScene(fileNamed: "WindSunScene")
         let result = SunScene(size: skView.frame.size)
         self.view!.presentScene(result, transition: transition)
+    }
+    
+    func whirlwind(){
+        vortexNode?.isEnabled = !vortexNode!.isEnabled
     }
 }

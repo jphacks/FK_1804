@@ -8,7 +8,14 @@
 
 import UIKit
 
+let photos = ["AkazukinCover.jpg","RabitCover.jpg","MomoCover.jpg","WindSunCover.jpg","MatchCover.jpg","ShindereraCover.jpg","PicCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg","SampleCover.jpg" ]
+
 class ViewController: UIViewController {
+    
+    
+    
+//    let img :uimage SampleCover.jpg
+    
     @IBOutlet weak var recommendCollectionView: UICollectionView!
     @IBOutlet weak var listCollectionView: UICollectionView!
     
@@ -20,7 +27,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     /*
     func recommendCollectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -45,12 +52,17 @@ extension ViewController: UICollectionViewDataSource {
     }
     */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        cell.backgroundColor = .green
+        let imageView = cell.contentView.viewWithTag(1) as! UIImageView
+        let cellImage = UIImage(named: photos[indexPath.row])
+        imageView.image = cellImage
+        imageView.layer.cornerRadius = 10
+        imageView.clipsToBounds = true
+//        cell.backgroundColor = UIColor.orangex
         
         return cell
     }

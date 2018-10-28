@@ -14,6 +14,7 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
     var sunNode:SKSpriteNode!
     var hotNode:SKSpriteNode!
     var flowerNode:SKSpriteNode!
+    var nextNode:SKSpriteNode!
     var player:AVAudioPlayer!
     let musicAction = SKAction.playSoundFileNamed("shine1.mp3", waitForCompletion: true)
     
@@ -43,6 +44,11 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
         
         flowerNode.position = CGPoint(x: self.frame.midX/4, y: 80)
         
+        //ネクストボタンのノードを作成
+        nextNode = SKSpriteNode(imageNamed: "next")
+        nextNode.name = "nextNode"
+        nextNode.setScale(0.5)
+        nextNode.position = CGPoint(x: self.frame.midX + self.frame.midX/2, y:nextNode.frame.height)
         
         //カテゴリマスクを設定する
         self.physicsBody?.categoryBitMask = 0b0001
@@ -56,6 +62,7 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
         self.addChild(sunNode)
         self.addChild(hotNode)
         self.addChild(flowerNode)
+        self.addChild(nextNode)
         
         //以下アクション
         let sunAction1 = SKAction.move(to: CGPoint(x: 0, y: self.frame.height*3/4), duration: 4)
@@ -68,8 +75,10 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in:self)
         if let node = atPoint(location) as? SKSpriteNode {
-            
-            //
+            let startButton = self.childNode(withName: "nextNode") as? SKSpriteNode
+            if(node == startButton) {
+                nextScene()
+            }
             let flowerButton = self.childNode(withName: "flowerNode") as? SKSpriteNode
             if(node == flowerButton) {
                 //let skView = self.view as! SKView
@@ -104,6 +113,14 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
             }
             
         }
+    }
+    func nextScene() {
+        let skView = self.view as! SKView
+        let transition = SKTransition.flipVertical(withDuration: 1)
+        //スタートボタンを押した場合はプレイ画面に切り替える。
+        //let result = WindSunScene(fileNamed: "WindSunScene")
+        let result = EndScene(size: skView.frame.size)
+        self.view!.presentScene(result, transition: transition)
     }
     
 }

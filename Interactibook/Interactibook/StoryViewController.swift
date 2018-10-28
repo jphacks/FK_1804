@@ -64,7 +64,10 @@ extension StoryViewController{
                 sc.nextScene()
             }else if nextIdx == 3{
                 let sc = self.storySceneView.scene as! SunScene
+<<<<<<< HEAD
                 sc.nextScene()
+=======
+>>>>>>> 7c097e9cb0995307ec3f9dd8fc31adb5532c7304
             }else {
                 return
             }

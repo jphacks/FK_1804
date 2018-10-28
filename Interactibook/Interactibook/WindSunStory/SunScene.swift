@@ -49,6 +49,10 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
         nextNode.name = "nextNode"
         nextNode.setScale(0.5)
         nextNode.position = CGPoint(x: self.frame.midX + self.frame.midX/2, y:nextNode.frame.height)
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 7c097e9cb0995307ec3f9dd8fc31adb5532c7304
         
         //カテゴリマスクを設定する
         self.physicsBody?.categoryBitMask = 0b0001
@@ -63,6 +67,10 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
         self.addChild(hotNode)
         self.addChild(flowerNode)
         self.addChild(nextNode)
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 7c097e9cb0995307ec3f9dd8fc31adb5532c7304
         
         //以下アクション
         let sunAction1 = SKAction.move(to: CGPoint(x: 0, y: self.frame.height*3/4), duration: 4)
@@ -75,10 +83,20 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in:self)
         if let node = atPoint(location) as? SKSpriteNode {
+<<<<<<< HEAD
+=======
+            
+            //タッチしたのがラベルノードの場合、スタートボタンなのかを確認する。
+>>>>>>> 7c097e9cb0995307ec3f9dd8fc31adb5532c7304
             let startButton = self.childNode(withName: "nextNode") as? SKSpriteNode
             if(node == startButton) {
                 nextScene()
             }
+<<<<<<< HEAD
+=======
+            
+            
+>>>>>>> 7c097e9cb0995307ec3f9dd8fc31adb5532c7304
             let flowerButton = self.childNode(withName: "flowerNode") as? SKSpriteNode
             if(node == flowerButton) {
                 //let skView = self.view as! SKView
@@ -118,7 +136,11 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
         let skView = self.view as! SKView
         let transition = SKTransition.flipVertical(withDuration: 1)
         //スタートボタンを押した場合はプレイ画面に切り替える。
+<<<<<<< HEAD
         //let result = WindSunScene(fileNamed: "WindSunScene")
+=======
+        //let result = Scene(fileNamed: "WindSunScene")
+>>>>>>> 7c097e9cb0995307ec3f9dd8fc31adb5532c7304
         let result = EndScene(size: skView.frame.size)
         self.view!.presentScene(result, transition: transition)
     }

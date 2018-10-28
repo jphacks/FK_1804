@@ -1,11 +1,10 @@
-//
+
 //  EndScene.swift
 //  Interactibook
 //
 //  Created by 仲地早司 on 2018/10/27.
 //  Copyright © 2018年 仲地早司. All rights reserved.
 //
-
 import Foundation
 import SpriteKit
 
@@ -67,5 +66,9 @@ class EndScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(maNode)
         self.addChild(iNode)
         
+<<<<<<< HEAD
     }
+=======
+}
+>>>>>>> 7c097e9cb0995307ec3f9dd8fc31adb5532c7304
 }

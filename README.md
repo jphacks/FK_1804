@@ -46,8 +46,8 @@ iOSアプリを起動した状態でClovaに話しかけることで、本製品
 *
 
 #### フレームワーク・ライブラリ・モジュール
-*
-*
+* iOS -> firebase の連携
+* sprite Kit (iOSの物理演算モジュール)
 
 #### デバイス
 * iPad(iPad mini)

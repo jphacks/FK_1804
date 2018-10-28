@@ -62,6 +62,9 @@ extension StoryViewController{
             }else if nextIdx == 2{
                 let sc =  self.storySceneView.scene as! WindScene
                 sc.nextScene()
+            }else if nextIdx == 3{
+                let sc = self.storySceneView.scene as! SunScene
+                sc.nextScene()
             }else {
                 return
             }

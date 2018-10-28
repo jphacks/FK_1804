@@ -81,29 +81,30 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
             //タッチしたのがラベルノードの場合、スタートボタンなのかを確認する。
             let startButton = self.childNode(withName: "nextNode") as? SKSpriteNode
             if(node == startButton) {
+                nextIdx += 1
                 nextScene()
             }
             
             
             let flowerButton = self.childNode(withName: "flowerNode") as? SKSpriteNode
             if(node == flowerButton) {
-                //let skView = self.view as! SKView
-                let particle = SKEmitterNode(fileNamed: "flowerparticle.sks")
-                
-                particle!.position = CGPoint(x: self.frame.midX/4, y: 80)
-                let action1 = SKAction.wait(forDuration: 0.7)
-                let action2 = SKAction.removeFromParent()
-                let actionAll = SKAction.sequence([action1, action2])
-                
-                //パーティクルをシーンに追加する。
-                self.addChild(particle!)
-                
-                //アクションを実行する。
-                particle!.run(actionAll)
-                
-                //音楽
-                
-                self.run(musicAction)
+                tochedFlower()
+//                let particle = SKEmitterNode(fileNamed: "flowerparticle.sks")
+//
+//                particle!.position = CGPoint(x: self.frame.midX/4, y: 80)
+//                let action1 = SKAction.wait(forDuration: 0.7)
+//                let action2 = SKAction.removeFromParent()
+//                let actionAll = SKAction.sequence([action1, action2])
+//
+//                //パーティクルをシーンに追加する。
+//                self.addChild(particle!)
+//
+//                //アクションを実行する。
+//                particle!.run(actionAll)
+//
+//                //音楽
+//
+//                self.run(musicAction)
                 /*
                  let url = Bundle.main.bundleURL.appendingPathComponent("shine1.mp3")
                  do {
@@ -128,5 +129,22 @@ class SunScene: SKScene, SKPhysicsContactDelegate{
         let result = EndScene(size: skView.frame.size)
         self.view!.presentScene(result, transition: transition)
     }
-    
+    func tochedFlower(){
+        let particle = SKEmitterNode(fileNamed: "flowerparticle.sks")
+        
+        particle!.position = CGPoint(x: self.frame.midX/4, y: 80)
+        let action1 = SKAction.wait(forDuration: 0.7)
+        let action2 = SKAction.removeFromParent()
+        let actionAll = SKAction.sequence([action1, action2])
+        
+        //パーティクルをシーンに追加する。
+        self.addChild(particle!)
+        
+        //アクションを実行する。
+        particle!.run(actionAll)
+        
+        //音楽
+        
+        self.run(musicAction)
+    }
 }

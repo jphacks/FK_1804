@@ -11,6 +11,7 @@ import UIKit
 class Singleton: NSObject {
     
     var setKeyWord : String! = "defaoults"
+    var nextIdx : Int! = 0
     
     class var sharedInstance: Singleton {
         struct Static {

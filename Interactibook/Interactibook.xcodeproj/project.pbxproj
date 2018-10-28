@@ -47,6 +47,14 @@
 		5E09224021844A5B0080C924 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E09223F21844A5B0080C924 /* GoogleService-Info.plist */; };
 		5E0922462184CAC70080C924 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0922452184CAC70080C924 /* apple.png */; };
 		5E0922482184CAD00080C924 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0922472184CAD00080C924 /* tree.png */; };
+		870D23EC21853D40004A9483 /* AkazukinCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870D23E421853D3F004A9483 /* AkazukinCover.jpg */; };
+		870D23ED21853D40004A9483 /* RabitCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870D23E521853D3F004A9483 /* RabitCover.jpg */; };
+		870D23EE21853D40004A9483 /* MomoCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870D23E621853D3F004A9483 /* MomoCover.jpg */; };
+		870D23EF21853D40004A9483 /* WindSunCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870D23E721853D40004A9483 /* WindSunCover.jpg */; };
+		870D23F021853D40004A9483 /* MatchCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870D23E821853D40004A9483 /* MatchCover.jpg */; };
+		870D23F121853D40004A9483 /* ShindereraCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870D23E921853D40004A9483 /* ShindereraCover.jpg */; };
+		870D23F221853D40004A9483 /* PicCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870D23EA21853D40004A9483 /* PicCover.jpg */; };
+		870D23F321853D40004A9483 /* SampleCover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 870D23EB21853D40004A9483 /* SampleCover.jpg */; };
 		875C2AC221847A6F008EDC67 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 875C2AC121847A6F008EDC67 /* Singleton.swift */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +122,14 @@
 		5E0922472184CAD00080C924 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
 		63D60AA82F0507A10D4BC775 /* Pods-InteractibookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractibookUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-InteractibookUITests/Pods-InteractibookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		81A464118BF429BAACF8A45B /* Pods-Interactibook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interactibook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Interactibook/Pods-Interactibook.debug.xcconfig"; sourceTree = "<group>"; };
+		870D23E421853D3F004A9483 /* AkazukinCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = AkazukinCover.jpg; sourceTree = "<group>"; };
+		870D23E521853D3F004A9483 /* RabitCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RabitCover.jpg; sourceTree = "<group>"; };
+		870D23E621853D3F004A9483 /* MomoCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MomoCover.jpg; sourceTree = "<group>"; };
+		870D23E721853D40004A9483 /* WindSunCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = WindSunCover.jpg; sourceTree = "<group>"; };
+		870D23E821853D40004A9483 /* MatchCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MatchCover.jpg; sourceTree = "<group>"; };
+		870D23E921853D40004A9483 /* ShindereraCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ShindereraCover.jpg; sourceTree = "<group>"; };
+		870D23EA21853D40004A9483 /* PicCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = PicCover.jpg; sourceTree = "<group>"; };
+		870D23EB21853D40004A9483 /* SampleCover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SampleCover.jpg; sourceTree = "<group>"; };
 		875C2AC121847A6F008EDC67 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		952B3FA115346BD1AA0BB6A6 /* Pods-InteractibookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractibookUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InteractibookUITests/Pods-InteractibookUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A82640FDB80D1A3A5A8E6860 /* Pods-Interactibook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interactibook.release.xcconfig"; path = "Pods/Target Support Files/Pods-Interactibook/Pods-Interactibook.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,12 +220,12 @@
 				5E092201218437BC0080C924 /* WindSunStory */,
 				5E0921D1218433B20080C924 /* AppDelegate.swift */,
 				5E0921D3218433B20080C924 /* ViewController.swift */,
+				5E0921FF218437AA0080C924 /* StoryViewController.swift */,
 				5E0921D5218433B20080C924 /* Main.storyboard */,
 				5E0921D8218433B30080C924 /* Assets.xcassets */,
 				5E0921DA218433B30080C924 /* LaunchScreen.storyboard */,
 				5E0921DD218433B30080C924 /* Info.plist */,
 				5E09223F21844A5B0080C924 /* GoogleService-Info.plist */,
-				5E0921FF218437AA0080C924 /* StoryViewController.swift */,
 			);
 			path = Interactibook;
 			sourceTree = "<group>";
@@ -270,8 +286,24 @@
 				5E09220D21843B800080C924 /* title.mp3 */,
 				5E09220F21843B800080C924 /* title.png */,
 				5E09221021843B800080C924 /* wind.mp3 */,
+				870D23E321853D3F004A9483 /* Cover */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		870D23E321853D3F004A9483 /* Cover */ = {
+			isa = PBXGroup;
+			children = (
+				870D23E421853D3F004A9483 /* AkazukinCover.jpg */,
+				870D23E521853D3F004A9483 /* RabitCover.jpg */,
+				870D23E621853D3F004A9483 /* MomoCover.jpg */,
+				870D23E721853D40004A9483 /* WindSunCover.jpg */,
+				870D23E821853D40004A9483 /* MatchCover.jpg */,
+				870D23E921853D40004A9483 /* ShindereraCover.jpg */,
+				870D23EA21853D40004A9483 /* PicCover.jpg */,
+				870D23EB21853D40004A9483 /* SampleCover.jpg */,
+			);
+			path = Cover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,24 +420,32 @@
 				5E09224021844A5B0080C924 /* GoogleService-Info.plist in Resources */,
 				5E0921DC218433B30080C924 /* LaunchScreen.storyboard in Resources */,
 				5E092233218442A70080C924 /* man_coat.png in Resources */,
+				870D23EF21853D40004A9483 /* WindSunCover.jpg in Resources */,
 				5E09223A218442EA0080C924 /* flower.png in Resources */,
 				5E09221B21843B800080C924 /* title.png in Resources */,
+				870D23F021853D40004A9483 /* MatchCover.jpg in Resources */,
 				5E09221721843B800080C924 /* haikei1.png in Resources */,
 				5E09221221843B800080C924 /* kusa1.png in Resources */,
 				5E09221621843B800080C924 /* man_title.png in Resources */,
 				5E09221921843B800080C924 /* title.mp3 in Resources */,
 				5E09223D218444130080C924 /* flowerparticle.sks in Resources */,
+				870D23EE21853D40004A9483 /* MomoCover.jpg in Resources */,
+				870D23F121853D40004A9483 /* ShindereraCover.jpg in Resources */,
+				870D23EC21853D40004A9483 /* AkazukinCover.jpg in Resources */,
 				5E092235218442A70080C924 /* man_stand.png in Resources */,
 				5E0921D9218433B30080C924 /* Assets.xcassets in Resources */,
 				5E092234218442A70080C924 /* hot.png in Resources */,
 				5E09221421843B800080C924 /* kusa3.png in Resources */,
+				870D23F221853D40004A9483 /* PicCover.jpg in Resources */,
 				5E09221121843B800080C924 /* kusa2.png in Resources */,
 				5E09221E21843C050080C924 /* next.png in Resources */,
 				5E0921D7218433B20080C924 /* Main.storyboard in Resources */,
+				870D23F321853D40004A9483 /* SampleCover.jpg in Resources */,
 				5E09221C21843B800080C924 /* wind.mp3 in Resources */,
 				5E09221A21843B800080C924 /* cloud.png in Resources */,
 				5E09221321843B800080C924 /* haikei2.jpg in Resources */,
 				5E09221821843B800080C924 /* cloud.mp3 in Resources */,
+				870D23ED21853D40004A9483 /* RabitCover.jpg in Resources */,
 				5E09223E218444130080C924 /* Assets.xcassets in Resources */,
 				5E0922462184CAC70080C924 /* apple.png in Resources */,
 				5E092239218442EA0080C924 /* shine1.mp3 in Resources */,

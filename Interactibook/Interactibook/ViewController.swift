@@ -62,7 +62,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
         imageView.image = cellImage
         imageView.layer.cornerRadius = 10
         imageView.clipsToBounds = true
-//        cell.backgroundColor = UIColor.orange
+//        cell.backgroundColor = UIColor.orangex
         
         return cell
     }

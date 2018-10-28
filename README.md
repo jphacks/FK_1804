@@ -1,6 +1,6 @@
 # Interactibook
 
-[![Product Name](image.png)]
+![Product Name](image.png)
 
 ## 製品概要
 ### 子育て x Tech

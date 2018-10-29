@@ -100,6 +100,7 @@ class WindSunScene:SKScene, SKPhysicsContactDelegate {
             //タッチしたのがラベルノードの場合、スタートボタンなのかを確認する。
             let startButton = self.childNode(withName: "nextNode") as? SKSpriteNode
             if(node == startButton) {
+                nextIdx += 1
                 nextScene()
             }
         }

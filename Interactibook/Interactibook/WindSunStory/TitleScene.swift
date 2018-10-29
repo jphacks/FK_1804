@@ -114,6 +114,7 @@ class TitleScene:SKScene{
             if(node == startButton) {
                 //スタートボタンを押した場合はプレイ画面に切り替える。
                 //let result = WindSunScene(fileNamed: "WindSunScene")
+                nextIdx += 1
                 nextScene()
             }
             

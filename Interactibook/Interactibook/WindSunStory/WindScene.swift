@@ -40,8 +40,8 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         
         //風のノードを作成
         konoha = SKSpriteNode(imageNamed: "konoha")
-        konoha.setScale(0.3)
-        konoha.position = CGPoint(x:self.frame.midX + 100, y: self.frame.midY/4 + 50)
+        konoha.setScale(0.09)
+        konoha.position = CGPoint(x: 30, y: self.frame.midY/4 + 50)
         
         //寒い人のノードを作成
         coldNode = SKSpriteNode(imageNamed: "cold")
@@ -98,7 +98,7 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         self.addChild(apple1Node)
         self.addChild(apple2Node)
         self.addChild(apple3Node)
-        self.addChild(konoha)
+        //self.addChild(konoha)
         
         //以下アクション
         let cloudActionBig = SKAction.scale(to: 1.6, duration: 1)
@@ -113,7 +113,7 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         vortexNode = SKFieldNode.vortexField()
         vortexNode.name = "vortex"
         vortexNode.position = CGPoint(x:self.frame.midX, y:self.frame.midY)
-        vortexNode.strength = 0.8
+        vortexNode.strength = 0.2
         
         //旋風ノードのカテゴリマスクを設定する。
         vortexNode.categoryBitMask = 0b0001
@@ -146,10 +146,6 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let location = touches.first!.location(in:self)
         
-        apple1Node.physicsBody = SKPhysicsBody(texture: apple1Node.texture!, size:apple1Node.size)
-        apple2Node.physicsBody = SKPhysicsBody(texture: apple2Node.texture!, size:apple2Node.size)
-        apple3Node.physicsBody = SKPhysicsBody(texture: apple3Node.texture!, size:apple3Node.size)
-        
         //旋風ノードを取得する。
         let vortexNode = self.childNode(withName: "vortex") as? SKFieldNode
         //旋風ノードの有効無効を切り替える。
@@ -158,6 +154,7 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
             //タッチしたのがラベルノードの場合、スタートボタンなのかを確認する。
             let startButton = self.childNode(withName: "nextNode") as? SKSpriteNode
             if(node == startButton) {
+                nextIdx += 1
                 nextScene()
             }
             
@@ -175,5 +172,9 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
     
     func whirlwind(){
         vortexNode?.isEnabled = !vortexNode!.isEnabled
+        apple1Node.physicsBody = SKPhysicsBody(texture: apple1Node.texture!, size:apple1Node.size)
+        apple2Node.physicsBody = SKPhysicsBody(texture: apple2Node.texture!, size:apple2Node.size)
+        apple3Node.physicsBody = SKPhysicsBody(texture: apple3Node.texture!, size:apple3Node.size)
+        konoha.physicsBody = SKPhysicsBody(texture: konoha.texture!, size:konoha.size)
     }
 }

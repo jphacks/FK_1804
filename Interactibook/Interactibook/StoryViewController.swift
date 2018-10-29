@@ -12,11 +12,12 @@ import Firebase
 import FirebaseCore
 import FirebaseDatabase
 
+var nextIdx:Int = 0
 class StoryViewController: UIViewController {
 
     @IBOutlet weak var storySceneView: SKView!
 
-    var nextIdx:Int = 0
+    //var nextIdx:Int = 0
     
     var ref:DatabaseReference!
     
@@ -65,13 +66,17 @@ extension StoryViewController{
             }else if nextIdx == 3{
                 let sc = self.storySceneView.scene as! SunScene
 <<<<<<< HEAD
+<<<<<<< HEAD
                 sc.nextScene()
 =======
 >>>>>>> 7c097e9cb0995307ec3f9dd8fc31adb5532c7304
+=======
+                sc.nextScene()
+>>>>>>> a067ff3c55ec073ac978d7aea19948467761cb1f
             }else {
                 return
             }
-            self.nextIdx += 1
+            nextIdx += 1
         case "wind":
             let sc =  self.storySceneView.scene as! WindScene
             sc.whirlwind()
@@ -86,6 +91,10 @@ extension StoryViewController{
 //        case "end":
 //            let sc =  self.storySceneView.scene as! 
 //            sc.nextScene()
+        case "flower":
+            let sc = self.storySceneView.scene as! SunScene
+            sc.tochedFlower()
+            return
         default:
             return
         }

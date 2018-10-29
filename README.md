@@ -1,6 +1,7 @@
 # Interactibook
 
-[![Product Name](interactibook_image.png)](https://youtu.be/GKpTDAl1NwU)
+[![Product Name](inter_image.png)](https://youtu.be/GKpTDAl1NwU)
+### [https://youtu.be/GKpTDAl1NwU](https://youtu.be/GKpTDAl1NwU "youtube_demo")
 
 ## 製品概要
 ### 子育て x Tech

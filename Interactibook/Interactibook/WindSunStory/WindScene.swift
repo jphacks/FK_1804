@@ -98,7 +98,7 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         self.addChild(apple1Node)
         self.addChild(apple2Node)
         self.addChild(apple3Node)
-        self.addChild(konoha)
+        //self.addChild(konoha)
         
         //以下アクション
         let cloudActionBig = SKAction.scale(to: 1.6, duration: 1)
@@ -113,7 +113,7 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
         vortexNode = SKFieldNode.vortexField()
         vortexNode.name = "vortex"
         vortexNode.position = CGPoint(x:self.frame.midX, y:self.frame.midY)
-        vortexNode.strength = 0.8
+        vortexNode.strength = 0.2
         
         //旋風ノードのカテゴリマスクを設定する。
         vortexNode.categoryBitMask = 0b0001
@@ -154,6 +154,7 @@ class WindScene:SKScene, SKPhysicsContactDelegate{
             //タッチしたのがラベルノードの場合、スタートボタンなのかを確認する。
             let startButton = self.childNode(withName: "nextNode") as? SKSpriteNode
             if(node == startButton) {
+                nextIdx += 1
                 nextScene()
             }
             
